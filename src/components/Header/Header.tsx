@@ -1,43 +1,38 @@
-import "./../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./Header.css";
+import "./Header.scss";
 import logo from "../../assets/img/logo-black.png";
 
 const Header = () => {
   return (
     <>
-      <header>
-        <nav className="navbar bg-black fixed-top navbar-expand-lg">
-          <div className="container fluid">
-            <div>
-              <a className="navbar-brand" href="#">
-                <img
-                  src={logo}
-                  alt="logo matthieu skrzypczak"
-                  width="100"
-                  height="100"
-                />
-              </a>
-              <span className="text-light">FULLSTACK SOFTWARE ENGINEER</span>
-            </div>
-            <div className="">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                    <a className="nav-link text-light" href="#" >Home</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link text-light" href="#" >About me</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link text-light" href="#" >Skills</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link text-light" href="#" >My project</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link text-light" href="#" >Contact</a>
-                </li>
-              </ul>
-            </div>
+      <header className="w-full bg-black">
+        <nav className="flex items-center justify-around p-4 bg-black w-full">
+          <div className="flex items-end space-x-6">
+            <img
+                        src={logo}
+                        alt="logo matthieu skrzypczak"
+                        height="100px"
+                        width="100px"
+                      />
+              <h1 className="text-white font-semibold lg uppercase">FULLSTACK SOFTWARE ENGINEER</h1>
+          </div>
+          <div>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="/" className="text-white uppercase"><span></span><span></span><span></span><span></span>Home</a>
+            </li>
+            <li>
+              <a href="#" className="text-white uppercase"><span></span><span></span><span></span><span></span>Skills</a>
+            </li>
+            <li>
+              <a href="#" className="text-white uppercase"><span></span><span></span><span></span><span></span>Projects</a>
+            </li>
+            <li>
+              <a href="#" className="text-white uppercase"><span></span><span></span><span></span><span></span>Contact</a>
+            </li>
+            <li>
+              <a href="/about" className="text-white uppercase"><span></span><span></span><span></span><span></span>About</a>
+            </li>
+          </ul>
           </div>
         </nav>
       </header>

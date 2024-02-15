@@ -1,8 +1,8 @@
-import './App.css';
-import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 
 function App() {
 
@@ -12,7 +12,15 @@ function App() {
       
       <Header />
       <Routes>
-        <Route path='/' element={ <Home />} />
+        <Route 
+            path='/' 
+            element={
+              <>
+              <Home />
+              <About />
+            </> 
+          } 
+      />
       </Routes>
     </BrowserRouter>
   )

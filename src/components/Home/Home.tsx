@@ -2,7 +2,9 @@ const Home = () => {
 
     return (
         <>
-            <p>Hello my name is Matthieu !</p>
+            <p className="text-white">Hello my name is Matthieu !</p>
+
+
         </>
     );
 
